@@ -1,0 +1,51 @@
+@import 'reset.css';
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  font-weight: bold;
+}
+.header {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.border {
+  border: solid black 1px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-template-rows: repeat(5, 50px);
+  grid-gap: 40px;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+
+}
+.start {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.reset {
+  cursor: pointer;
+}
+
+.green {
+  background: green;
+
+}
+.white {
+  background: white;
+
+}
