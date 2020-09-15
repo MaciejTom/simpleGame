@@ -49,3 +49,9 @@ h1 {
   background: white;
 
 }
+.info-lose {
+  color: red;
+}
+.info-win {
+  color: green;
+}
