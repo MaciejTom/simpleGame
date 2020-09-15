@@ -91,11 +91,12 @@ const addPoint = () => {
 };
 
 const subtractLive = () => {
-  if (liveSpan.innerHTML == 0) {
+  if (livesSpan.innerHTML == 0) {
     console.log("CO TO KURWA")
     return;
   } else {
   console.log("ODEJMIJ ŻYCIE")
+  negativePoints()
   checkGameOver()
 }
 };
@@ -133,7 +134,7 @@ const checkWinGame = () => {
 
     document.body.appendChild(winGameSpan);
     console.log(winGameSpan)
-    return winGameSpan
+
   }
 
   const winGame = () => {
@@ -142,7 +143,7 @@ const checkWinGame = () => {
 
   }
 pointsSpan.innerHTML == 10 && winGame()
-return createWinSpan();
+
 
 }
 
@@ -156,20 +157,14 @@ const negativePoints = () => {
 const start = () => {
   changingColors();
   timerStart();
-  console.log(typeof winGameSpan !== "undefined")
-  console.log(document.getElementsByClassName("info-win").length > 0)
-  if (document.getElementsByClassName("info-win").length > 0) {
-    winGameSpan.parentNode.removeChild(winGameSpan);
+
+  const winGameSpan = document.querySelector(".info-win")
+  const gameOverSpan = document.querySelector(".info-lose")
+
+  document.getElementsByClassName("info-win").length > 0 && winGameSpan.parentNode.removeChild(winGameSpan);
+  document.getElementsByClassName("info-lose").length > 0 && gameOverSpan.parentNode.removeChild(gameOverSpan);
   }
-//   if (typeof winGameSpan !== "undefined") {
-//     console.log(document.body.contains(winGameSpan))
-//
-// }
-// } else {
-//   winGameSpan.parentNode.removeChild(winGameSpan);
-//   console.log(winGameSpan)
-// }
-}
+
 
 const reset = () => {
   clearInterval(stoperColorWhite);
