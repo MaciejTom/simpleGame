@@ -166,6 +166,7 @@ const start = () => {
   }
 
 
+
 const reset = () => {
   clearInterval(stoperColorWhite);
   clearInterval(stoperColorGreen);
